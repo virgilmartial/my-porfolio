@@ -1,4 +1,4 @@
-@if $include-header == true {
+@if $include-header == false {
 
 header {
    @include limitMaxWidth($width, $max-width);

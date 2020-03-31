@@ -21,16 +21,16 @@ $flexElements: (
    }
 }
 
-.inColumns {
+.fdColumns {
    flex-direction: column;
 }
-.vStart {
+.aiStart {
    align-items: flex-start;
 }
-.vCenter {
+.aiCenter {
    align-items: center;
 }
-.vEnd {
+.aiEnd {
    align-items: flex-end;
 }
 .noWrap {
