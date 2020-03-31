@@ -134,7 +134,7 @@ a {
 }
 
 a:hover {
-  color: #DA699A;
+  color: #A5A5A5;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
@@ -284,9 +284,9 @@ input.btn--disabled {
 .dark-bg .btn--secondary,
 .dark-bg a.btn--secondary,
 .dark-bg input.btn--secondary {
-  background-color: #DA699A;
+  background-color: #A5A5A5;
   color: #fff;
-  border-color: #DA699A;
+  border-color: #A5A5A5;
 }
 
 .dark-bg .btn--secondary:hover,
@@ -1012,7 +1012,7 @@ textarea {
   margin-bottom: 10px;
 }
 
-.section1-picture span:nth-child(1) {
+.section1-picture span:nth-child(1), .section--myskill .container div:nth-child(1), .section--myskill .container div:nth-child(2), .section--myskill .container div:nth-child(3), .section--myskill .container div:nth-child(4), .section--myskill .container div:nth-child(5), .section--myskill .container div:nth-child(6), .section--myskill .container div:nth-child(7) {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1101,7 +1101,7 @@ textarea {
   left: 0;
 }
 
-.section1-sobremi::after {
+.subtitle::after {
   content: "";
   display: block;
   height: 4px;
@@ -1111,7 +1111,7 @@ textarea {
 }
 
 @media (max-width: 768px) {
-  .section1-sobremi::after {
+  .subtitle::after {
     margin-right: auto;
     margin-left: auto;
   }
@@ -1120,6 +1120,113 @@ textarea {
 @media (max-width: 768px) {
   .section1-aboutme {
     text-align: center;
+  }
+}
+
+.section--myskill {
+  background-color: #0A1414;
+}
+
+.section--myskill .container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin: 15px;
+}
+
+.section--myskill .container div::before {
+  content: "";
+  border-radius: 100%;
+  background-color: #d80a0a;
+}
+
+.section--myskill .container div:nth-child(1) {
+  background-image: url(/img/HTML5.png);
+  background-size: 70%;
+}
+
+.section--myskill .container div:nth-child(2) {
+  background-image: url(/img/css3.png);
+  background-size: 70%;
+}
+
+.section--myskill .container div:nth-child(3) {
+  background-image: url(/img/JavaScript.png);
+  background-size: 70%;
+}
+
+.section--myskill .container div:nth-child(4) {
+  background-image: url(/img/sass.png);
+  background-size: 70%;
+}
+
+.section--myskill .container div:nth-child(5) {
+  background-image: url(/img/bootstrap.png);
+  background-size: 70%;
+}
+
+.section--myskill .container div:nth-child(6) {
+  background-image: url(/img/Wordpress.png);
+  background-size: 70%;
+}
+
+.section--myskill .container div:nth-child(7) {
+  background-image: url(/img/Adobexd.png);
+  background-size: 70%;
+}
+
+.svg--skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.svg--skill .circle {
+  fill: none;
+  stroke: #E3B507;
+  stroke-width: 3px;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 400;
+  -webkit-animation: progress 2s infinite alternate;
+          animation: progress 2s infinite alternate;
+}
+
+.circlein {
+  fill: none;
+  stroke: #e6e6e634;
+  stroke-width: 3px;
+}
+
+@-webkit-keyframes progress {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 10;
+  }
+}
+
+@keyframes progress {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 10;
   }
 }
 
