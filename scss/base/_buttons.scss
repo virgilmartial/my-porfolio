@@ -62,6 +62,27 @@ input.btn--secondary {
       border-color: $color-3;
    }
 }
+.btn--tercery,
+a.btn--tercery,
+input.btn--tercery {
+   @extend %btn;
+   background-color: $color-3;
+   color: $color-white;
+   border-color: $color-3;
+   margin: 0;
+   width: 100%;
+
+   &:hover {
+      background-color: transparent;
+      color: $color-3;
+      border-color: $color-3;
+   }
+   &:active {
+      background-color: transparent;
+      color: $color-3;
+      border-color: $color-3;
+   }
+}
 
 .btn--disabled,
 a.btn--disabled,

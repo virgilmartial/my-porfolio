@@ -228,3 +228,37 @@
     }
 }
 
+.section--servives{
+    .services{
+        div{
+            width: 30%;
+            min-width: 250px;
+            margin: $font-size;
+            padding: $font-size;
+            background-color: $color-black;
+            border-radius: 5px;
+
+
+            .icon-services{
+                fill: $color-3;
+                width: $font-size*3;
+                height: $font-size*3;
+            }
+        }
+       
+    }
+}
+
+.icon-contact{
+   color: $color-white;
+   margin: $font-size/2;
+   svg{
+       width: $font-size*1.5;
+       height: $font-size*1.5;
+       fill: $color-3;
+       margin: 0 5px;
+    
+   }
+
+}
+

@@ -162,7 +162,9 @@ a:active {
 a.btn--primary,
 input.btn--primary, .btn--secondary,
 a.btn--secondary,
-input.btn--secondary, .btn--disabled,
+input.btn--secondary, .btn--tercery,
+a.btn--tercery,
+input.btn--tercery, .btn--disabled,
 a.btn--disabled,
 input.btn--disabled {
   display: inline-block;
@@ -184,19 +186,21 @@ input.btn--disabled {
   a.btn--primary,
   input.btn--primary, .btn--secondary,
   a.btn--secondary,
-  input.btn--secondary, .btn--disabled,
+  input.btn--secondary, .btn--tercery,
+  a.btn--tercery,
+  input.btn--tercery, .btn--disabled,
   a.btn--disabled,
   input.btn--disabled {
     padding: 8px 20px;
   }
 }
 
-.btn--primary:hover, .btn--secondary:hover, .btn--disabled:hover {
+.btn--primary:hover, .btn--secondary:hover, .btn--tercery:hover, .btn--disabled:hover {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
-.btn--primary:active, .btn--secondary:active, .btn--disabled:active {
+.btn--primary:active, .btn--secondary:active, .btn--tercery:active, .btn--disabled:active {
   -webkit-transition: none;
   transition: none;
 }
@@ -246,6 +250,32 @@ input.btn--secondary:hover {
 .btn--secondary:active,
 a.btn--secondary:active,
 input.btn--secondary:active {
+  background-color: transparent;
+  color: #E3B507;
+  border-color: #E3B507;
+}
+
+.btn--tercery,
+a.btn--tercery,
+input.btn--tercery {
+  background-color: #E3B507;
+  color: #fff;
+  border-color: #E3B507;
+  margin: 0;
+  width: 100%;
+}
+
+.btn--tercery:hover,
+a.btn--tercery:hover,
+input.btn--tercery:hover {
+  background-color: transparent;
+  color: #E3B507;
+  border-color: #E3B507;
+}
+
+.btn--tercery:active,
+a.btn--tercery:active,
+input.btn--tercery:active {
   background-color: transparent;
   color: #E3B507;
   border-color: #E3B507;
@@ -1228,6 +1258,33 @@ textarea {
   to {
     stroke-dashoffset: 10;
   }
+}
+
+.section--servives .services div {
+  width: 30%;
+  min-width: 250px;
+  margin: 16px;
+  padding: 16px;
+  background-color: #111;
+  border-radius: 5px;
+}
+
+.section--servives .services div .icon-services {
+  fill: #E3B507;
+  width: 48px;
+  height: 48px;
+}
+
+.icon-contact {
+  color: #fff;
+  margin: 8px;
+}
+
+.icon-contact svg {
+  width: 24px;
+  height: 24px;
+  fill: #E3B507;
+  margin: 0 5px;
 }
 
 h5.sg {
