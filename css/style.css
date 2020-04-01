@@ -1069,11 +1069,18 @@ textarea {
   }
 }
 
+.section {
+  padding: 10px;
+}
+
 .container {
   width: 100%;
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .bgc1 {
@@ -1170,7 +1177,6 @@ textarea {
   width: 200px;
   height: 200px;
   border-radius: 100%;
-  margin: 15px;
 }
 
 .section--myskill .container div::before {
@@ -1261,9 +1267,8 @@ textarea {
 }
 
 .section--servives .services div {
-  width: 30%;
   min-width: 250px;
-  margin: 16px;
+  margin-top: 32px;
   padding: 16px;
   background-color: #111;
   border-radius: 5px;
