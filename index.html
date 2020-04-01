@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/css/style.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container flex aiCenter">
-            <div class="header-left w45">
+    <header class="header pt30">
+        <div class="container flex flex--between aiCenter ">
+            <div class="header-left w48 p10">
                 <p>Hola</p>
                 <h1 class="title mb30">
                     <span>Soy virgil Martial</span>
@@ -17,32 +17,35 @@
                 </h1>
                 <a href="#" class="btn--primary" >Siga me</a>
             </div>
-            <div class="header-picture w45"> <img src="/img/IMG_20190416_104543_5.png" alt="virgil martial"></div>
+            <div class="header-picture w48"> <img src="/img/portrait.png" alt="virgil martial">
+            </div>
             
         </div>   
     </header>
     <main class="main">
-        <section class=" section section--1 bgc2">
-            <div class="container flex flex--between aiCenter">
-                <div class="section1-picture w45 mt40 mb40">
+        <section class=" section section--1 bgc5">
+            <div class="container flex flex--between aiCenter p10 pt30 pb30">
+                <div class="section1-picture w48">
                     <span></span>
                     <span></span>
 
                 </div>
-                <div class="section1-aboutme w45 mt40 mb40">
+                <div class="section1-aboutme w48 pt30 pb30 ">
                     <div class="subtitle"><p class="h4">Sobre mi</p></div>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi porro sequi at dolorum quidem minus rem alias veritatis perferendis libero magnam dolores suscipit impedit tempora maxime, rerum beatae quod fuga adipisci optio minima aut voluptatibus ducimus! Beatae </p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, possimus.</p>
-                    <div> <a href="#" class="btn--secondary">Descarga mi CV</a><a href="#" class="btn--primary">Siga me</a></div>
+                    <div> <a href="#" class="btn--secondary"> <svg style="width: 18px;height: 18px; margin-right: 10px"><use xlink:href="/icons/sprite.svg#download"> </use> </svg>Descarga mi CV</a><a href="#" class="btn--primary">Siga me</a></div>
                     
                 </div>
             </div>
 
         </section>
 
-        <section class="section section--myskill pt30 pb30">
-            <div class="container subtitle "><p class="h4">Mi perfil</p></div>
-            <div class="container flex flex--evenly">
+        <section class="section section--myskill bgc2 pb30">
+            <div class="container subtitle pt30 pb30 pl10 pr10">
+                <p class="h4">Mi perfil</p>
+            </div>
+            <div class="container flex flex--evenly p10">
                 <div>
                     <svg class="svg svg--skill"> 
                         <circle class="circle" cx="100" cy="100" r="97"></circle>
@@ -95,10 +98,10 @@
             </div>  
         </section>
 
-        <section class="section section--servives bgc2">
-            <div class="container subtitle "><p class="h4">Lo que puedo hacer</p></div>
-            <div class="container flex flex--center">
-            <div class="container services flex flex--between">
+        <section class="section section--servives bgc5 pb30">
+            <div class="container subtitle pt30 pb30 pl10 pr10 "><p class="h4">Lo que puedo hacer</p>
+            </div>
+            <div class="container services flex flex--between pl10 pr10">
                 <div class="txtc w30">
                     <svg class="svg icon-services"><use xlink:href="/icons/sprite.svg#pencil"></use> 
                     </svg>
@@ -139,11 +142,10 @@
 
         </section>
         <section class="section bgc2">
-            <div class="container subtitle"><p class="h4">Contacta me</p>
+            <div class="container subtitle pt30 pb30 pl10 pr10"><p class="h4">Contacta me</p>
             </div>
-            <div class="container flex">
-               
-                <div class="container icons-contact flex flex--center p20">
+            <div class="container flex">   
+                <div class="container icons-contact flex flex--center">
                     <div>
                         <a href="#" class="icon-contact phone flex"> <svg><use xlink:href="/icons/sprite.svg#call"> </use> </svg> +34 632587009 
                         </a>
@@ -156,7 +158,7 @@
                     </div>
     
                 </div>
-                <div class="container icons-socialnetwork flex flex--center p20">
+                <div class="container icons-socialnetwork flex flex--center">
                     <div>
                         <a href="#" class="icon-contact github flex"> <svg><use xlink:href="/icons/sprite.svg#github-logo"> </use> </svg> </a>
                     </div>
@@ -181,8 +183,8 @@
 
             </div>
 
-            <div class="container  flex flex--between">
-                <div class="w45 mt30">
+            <div class="container  flex flex--between pl10 pr10">
+                <div class="w48 mt30">
                     <form action="#">
                         <input type="text" name="name" id="name" placeholder="Tu Nombre">
                         <input type="email" name="mail" id="mail" placeholder="Tu Email">
@@ -190,7 +192,7 @@
                     </form>
                     <a href="#" class="btn--tercery txtc">Enviar</a>
                 </div>
-                <div class="w45 mt30">
+                <div class="w48 mt30">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12155.631191186989!2d-3.695957114204118!3d40.388736063528775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4226414fab28b3%3A0x52f92d7e63bab9b5!2sLegazpi%2C%2028045%20Madrid!5e0!3m2!1sfr!2ses!4v1585672877051!5m2!1sfr!2ses" width="100%" height="374" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                
@@ -198,32 +200,33 @@
             </div>
 
         </section>
-        <footer class="footer bgc2">
-            <div class="container flex flex--between pt30 pb30">
-                <div>
-                    <small> © 2020 <span>virgilmartial.All right reserved</span>
-                    </small>
-                </div>
-                
-                <div class=" icons-socialnetwork flex">
-                    <div>
-                        <a href="#" class="icon-contact github flex"> <svg><use xlink:href="/icons/sprite.svg#github-logo"> </use> </svg> </a>
-                    </div>
-                    <div>
-                        <a href="#" class="icon-contact facebook flex"> <svg><use xlink:href="/icons/sprite.svg#facebook"> </use> </svg></a>
-                    </div>
-                    <div>
-                        <a href="#" class="icon-contact instagram flex"> <svg><use xlink:href="/icons/sprite.svg#instagram"> </use> </svg> </a>
-                    </div>
-                    <div>
-                        <a href="#" class="icon-contact twitter flex"> <svg><use xlink:href="/icons/sprite.svg#twitter"> </use> </svg> </a>
-                    </div>
-                </div>
-            </div>
-
-        </footer>
+        
 
     </main>
+    <footer class="footer bgc5">
+        <div class="container flex flex--between pt30 pb20">
+            <div class="center">
+                <small> © 2020 <span>virgilmartial.All right reserved</span>
+                </small>
+            </div>
+            
+            <div class=" icons-socialnetwork flex center">
+                <div>
+                    <a href="#" class="icon-contact github flex"> <svg><use xlink:href="/icons/sprite.svg#github-logo"> </use> </svg> </a>
+                </div>
+                <div>
+                    <a href="#" class="icon-contact facebook flex"> <svg><use xlink:href="/icons/sprite.svg#facebook"> </use> </svg></a>
+                </div>
+                <div>
+                    <a href="#" class="icon-contact instagram flex"> <svg><use xlink:href="/icons/sprite.svg#instagram"> </use> </svg> </a>
+                </div>
+                <div>
+                    <a href="#" class="icon-contact twitter flex"> <svg><use xlink:href="/icons/sprite.svg#twitter"> </use> </svg> </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
     
 </body>
 </html>

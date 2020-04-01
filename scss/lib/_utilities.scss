@@ -83,14 +83,14 @@ $flexElements: (
    color: $color-txt2;
 }
 
-@for $w from 1 through 20 {
-   .w#{$w*5} {
-     width: $w*5%;
+@for $w from 1 through 100 {
+   .w#{$w*1} {
+     width: $w*1%;
    }
 }
 @media (max-width: $media-s){
-   @for $w from 1 through 20 {
-      .w#{$w*5} {
+   @for $w from 1 through 100 {
+      .w#{$w*1} {
         width: 100%;
       }
    }
