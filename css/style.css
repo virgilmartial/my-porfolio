@@ -1609,6 +1609,10 @@ textarea {
 }
 
 .header {
+  overflow: hidden;
+  height: auto;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
   background: #0a0909;
   background: -webkit-gradient(left bottom, right top, color-stop(52%, #0a0909), color-stop(100%, #e3b507));
   background: linear-gradient(45deg, #0a0909 52%, #e3b507 100%);
@@ -1624,9 +1628,169 @@ textarea {
   .header-picture {
     display: none;
   }
-  .header-left {
-    text-align: center;
+}
+
+.topbar .nav {
+  position: fixed;
+  z-index: 510;
+  top: 0;
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .topbar .nav {
+    right: -155px;
+    background-color: rgba(10, 9, 9, 0.2);
   }
+}
+
+.topbar .nav .icons-socialnetwork {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .topbar .nav .icons-socialnetwork {
+    display: block;
+  }
+}
+
+.topbar .nav .btn-menu {
+  display: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .topbar .nav .btn-menu {
+    display: block;
+  }
+}
+
+.topbar .nav .btn-menu .btn-ambg {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #0A0909;
+  position: absolute;
+  top: 15px;
+  left: 3px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.topbar .nav .btn-menu .btn-ambg::before {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 2px;
+  background-color: #0A0909;
+  position: relative;
+  top: 5px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.topbar .nav .btn-menu .btn-ambg::after {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 2px;
+  background-color: #0A0909;
+  position: relative;
+  top: -7px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.topbar .nav .btn-menu .btn-x {
+  display: block;
+  width: 0px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #0A0909;
+  position: absolute;
+  top: 15px;
+  left: 3px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.topbar .nav .btn-menu .btn-x::before {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 2px;
+  background-color: #0A0909;
+  position: relative;
+  top: 0px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.topbar .nav .btn-menu .btn-x::after {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 2px;
+  background-color: #0A0909;
+  position: relative;
+  top: -2px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.topbar .nav .ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: initial;
+}
+
+.topbar .nav .ul li {
+  list-style: none;
+}
+
+.topbar .nav .ul li a {
+  display: block;
+  color: #A5A5A5;
+  padding: 8px;
+  font-size: 19.2px;
+}
+
+.topbar .nav .ul li a:hover {
+  color: #0A0909;
+}
+
+@media (max-width: 768px) {
+  .topbar .nav .ul {
+    display: block;
+  }
+  .topbar .nav .ul li a {
+    color: #A5A5A5;
+    padding: 16px;
+    font-size: 19.2px;
+    background-color: rgba(10, 9, 9, 0.2);
+    border-bottom: 1px solid #E3B507;
+  }
+  .topbar .nav .ul li a:hover {
+    color: #E3B507;
+    background-color: rgba(10, 9, 9, 0.6);
+  }
+}
+
+.topbar .nav--mobil {
+  right: 0;
+  position: relative;
 }
 
 .container {
@@ -1687,7 +1851,16 @@ textarea {
   top: 0;
   right: 0;
   z-index: 500;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
   background-image: url(/img/IMG_20190416_104543_5.jpg);
+}
+
+.section1-picture span:nth-child(1):hover {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+  width: 98%;
+  height: 98%;
 }
 
 .section1-picture span:nth-child(2) {
@@ -1707,20 +1880,15 @@ textarea {
   display: block;
   height: 4px;
   background-color: #E3B507;
-  width: 10%;
-  margin-bottom: 16px;
+  width: 25%;
+  position: absolute;
+  bottom: 19px;
 }
 
 @media (max-width: 768px) {
   .subtitle::after {
     margin-right: auto;
     margin-left: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .section1-aboutme {
-    text-align: center;
   }
 }
 
@@ -1741,12 +1909,12 @@ textarea {
   width: 200px;
   height: 200px;
   border-radius: 100%;
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
 }
 
-.section--myskill .container div::before {
-  content: "";
-  border-radius: 100%;
-  background-color: #d80a0a;
+.section--myskill .container div:hover {
+  background-size: 90%;
 }
 
 .section--myskill .container div:nth-child(1) {
@@ -1781,7 +1949,11 @@ textarea {
 
 .section--myskill .container div:nth-child(7) {
   background-image: url(/img/Adobexd.png);
-  background-size: 70%;
+  background-size: 60%;
+}
+
+.section--myskill .container div:hover {
+  background-size: 90%;
 }
 
 .svg--skill {
@@ -1836,6 +2008,8 @@ textarea {
   padding: 16px;
   background-color: #0A0909;
   border-radius: 5px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 .section--servives .services div .icon-services {
@@ -1844,9 +2018,30 @@ textarea {
   height: 48px;
 }
 
+.section--servives .services div:hover {
+  opacity: .8;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: -5px 5px 31px 2px rgba(0, 0, 0, 0.75);
+          box-shadow: -5px 5px 31px 2px rgba(0, 0, 0, 0.75);
+}
+
 .icon-contact {
   color: #fff;
   margin: 8px;
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
+}
+
+.icon-contact:hover {
+  position: relative;
+  top: -3px;
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
+}
+
+.icon-contact:hover svg {
+  fill: #A5A5A5;
 }
 
 .icon-contact svg {
@@ -1854,6 +2049,8 @@ textarea {
   height: 24px;
   fill: #E3B507;
   margin: 0 5px;
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
 }
 
 h5.sg {

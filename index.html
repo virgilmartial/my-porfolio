@@ -5,9 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio virgil martial front-end web developer</title>
     <link rel="stylesheet" href="/css/style.min.css">
+    
 </head>
 <body>
-    <header class="header pt30">
+    <header class="header ">
+        <div class="container topbar flex flex--end pl10 pr10">
+            <nav id="navID"  class="nav flex"> 
+                <span>
+                    <span id="btnMenuID" class="btn-menu center">
+                       <span id="btnAmbgID" class="btn-ambg"></span>
+                    </span>  
+                    <div class=" icons-socialnetwork mt30">
+                        <div>
+                            <a href="#" class="icon-contact phone flex"> <svg><use xlink:href="/icons/sprite.svg#call"> </use> </svg>  
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://api.whatsapp.com/send?phone=240222703645" class="icon-contact phone flex"> <svg><use xlink:href="/icons/sprite.svg#whatsapp"> </use> </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="icon-contact github flex"> <svg><use xlink:href="/icons/sprite.svg#github-logo"> </use> </svg> </a>
+                        </div>
+                        <div>
+                            <a href="#" class="icon-contact facebook flex"> <svg><use xlink:href="/icons/sprite.svg#facebook"> </use> </svg></a>
+                        </div>
+                       
+                        
+                    </div>
+                </span>
+                
+                <ul class="ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#sobreMe">Sobre me</a></li>
+                    <li><a href="#miPerfil">Mi perfil</a></li>
+                    <li><a href="#competencia">Lo que hago</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul> 
+                
+            </nav>
+        </div>
+            
         <div class="container flex flex--between aiCenter ">
             <div class="header-left w48 p10">
                 <p>Hola</p>
@@ -30,11 +68,11 @@
                     <span></span>
 
                 </div>
-                <div class="section1-aboutme w48 pt30 pb30 ">
-                    <div class="subtitle"><p class="h4">Sobre mi</p></div>
+                <div id="sobreMe" class="section1-aboutme w48 pt30 pb30 ">
+                    <div id="sobreMi" class="subtitle pb20"><p class="h4">Sobre mi</p></div>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi porro sequi at dolorum quidem minus rem alias veritatis perferendis libero magnam dolores suscipit impedit tempora maxime, rerum beatae quod fuga adipisci optio minima aut voluptatibus ducimus! Beatae </p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, possimus.</p>
-                    <div> <a href="#" class="btn--secondary"> <svg style="width: 18px;height: 18px; margin-right: 10px"><use xlink:href="/icons/sprite.svg#download"> </use> </svg>Descarga mi CV</a><a href="#" class="btn--primary">Siga me</a></div>
+                    <div> <a href="/folders/cv es.pdf" download="mycv" class="btn--secondary"> <svg style="width: 18px;height: 18px; margin-right: 10px"><use xlink:href="/icons/sprite.svg#download"> </use> </svg>Descarga mi CV</a><a href="#" class="btn--primary">Siga me</a></div>
                     
                 </div>
             </div>
@@ -42,7 +80,7 @@
         </section>
 
         <section class="section section--myskill bgc2 pb30">
-            <div class="container subtitle pt30 pb30 pl10 pr10">
+            <div id="miPerfil" class="container subtitle pt30 pb30 pl10 pr10">
                 <p class="h4">Mi perfil</p>
             </div>
             <div class="container flex flex--evenly p10">
@@ -99,7 +137,7 @@
         </section>
 
         <section class="section section--servives bgc5 pb30">
-            <div class="container subtitle pt30 pb30 pl10 pr10 "><p class="h4">Lo que puedo hacer</p>
+            <div id="competencia" class="container subtitle pt30 pb30 pl10 pr10 "><p class="h4">Lo que puedo hacer</p>
             </div>
             <div class="container services flex flex--between pl10 pr10">
                 <div class="txtc w30">
@@ -142,16 +180,22 @@
 
         </section>
         <section class="section bgc2">
-            <div class="container subtitle pt30 pb30 pl10 pr10"><p class="h4">Contacta me</p>
+            <div id="contact" class="container subtitle pt30 pb30 pl10 pr10"><p class="h4">Contacta me</p>
             </div>
             <div class="container flex">   
+                <div class="container icons-contact flex flex--center p20">
+                    <div>
+                        <a href="#" class="icon-contact phone flex"> <svg><use xlink:href="/icons/sprite.svg#whatsapp"> </use> </svg>
+                        </a>
+                    </div>
+                </div>
                 <div class="container icons-contact flex flex--center">
                     <div>
                         <a href="#" class="icon-contact phone flex"> <svg><use xlink:href="/icons/sprite.svg#call"> </use> </svg> +34 632587009 
                         </a>
                     </div>
                     <div>
-                        <a href="#" class="icon-contact phone flex"> <svg><use xlink:href="/icons/sprite.svg#envelope"> </use> </svg> virgilmartial@gmail.com</a>
+                        <a href="#" class="icon-contact mail flex"> <svg><use xlink:href="/icons/sprite.svg#envelope"> </use> </svg> virgilmartial@gmail.com</a>
                     </div>
                     <div>
                         <a href="#" class="icon-contact placeholder flex"> <svg><use xlink:href="/icons/sprite.svg#placeholder"> </use> </svg> Madrid, España</a>
@@ -173,12 +217,7 @@
                     </div>
     
                 </div>
-                <div class="container icons-contact flex flex--center p20">
-                    <div>
-                        <a href="#" class="icon-contact phone flex"> <svg><use xlink:href="/icons/sprite.svg#whatsapp"> </use> </svg>
-                        </a>
-                    </div>
-                </div>
+               
                 
 
             </div>
@@ -227,6 +266,18 @@
         </div>
 
     </footer>
-    
+    <script>
+        var btnMenu = document.querySelector("#btnMenuID");
+        var menuAmbg = document.querySelector("#btnAmbgID");
+        var nav = document.querySelector("#navID");
+
+        btnMenu.addEventListener("click",functionBtn);
+         function functionBtn() {
+             menuAmbg.classList.toggle("btn-x");
+             nav.classList.toggle("nav--mobil");
+        
+         }
+
+    </script>
 </body>
 </html>

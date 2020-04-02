@@ -12,6 +12,9 @@
 }
 
 .header{
+    overflow: hidden;
+    height: auto;
+    transition: .4s ease-in-out ;
     background: rgba(10,9,9,1);
 background: -moz-linear-gradient(45deg, rgba(10,9,9,1) 52%, rgba(227,181,7,1) 100%);
 background: -webkit-gradient(left bottom, right top, color-stop(52%, rgba(10,9,9,1)), color-stop(100%, rgba(227,181,7,1)));
@@ -21,8 +24,6 @@ background: -ms-linear-gradient(45deg, rgba(10,9,9,1) 52%, rgba(227,181,7,1) 100
 background: linear-gradient(45deg, rgba(10,9,9,1) 52%, rgba(227,181,7,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', endColorstr='#e3b507', GradientType=1 );
 }
-
-
 
     .header-picture{
     
@@ -34,12 +35,158 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
            display: none;
            
         }  
-        .header-left{
-            text-align: center;
-         }  
     }
-
+    .topbar{
     
+        
+        .nav{
+            position: fixed;
+            z-index: 510;
+            top: 0;
+            @media (max-width: $media-s){
+              right: -155px;
+              background-color: rgba($color-2, .2);
+              
+             } 
+            transition: .8s ease-in-out;
+            .icons-socialnetwork{
+                display: none;
+                @media (max-width: $media-s){
+                    display: block;
+                  
+                 } 
+            }
+
+           .btn-menu{
+               display: none;
+               width: 30px;
+               height: 30px;
+               border-radius: 100%;
+               
+               background-color: $color-white;
+               position: relative;
+               cursor: pointer;
+                @media (max-width: $media-s){
+                   display: block;
+                 
+                } 
+                .btn-ambg{
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    border-radius: 5px;
+                    background-color: $color-2;
+                    position: absolute;
+                    top: 15px;
+                    left: 3px;
+                    transition: .5s ease-in-out;
+                    &::before{
+                        content: "";
+                        display: block;
+                        width: 23px;
+                        height: 2px;
+                        background-color: $color-2;
+                        position: relative;
+                        top: 5px;
+                        transition: .5s ease-in-out;
+                    }
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 23px;
+                        height: 2px;
+                        background-color: $color-2;
+                        position: relative;
+                        top: -7px;
+                        transition: .5s ease-in-out;
+                    }
+                  
+                }
+                .btn-x{
+                    display: block;
+                    width: 0px;
+                    height: 2px;
+                    border-radius: 5px;
+                    background-color: $color-2;
+                    position: absolute;
+                    top: 15px;
+                    left: 3px;
+                    transition: .5s ease-in-out;
+                    &::before{
+                        content: "";
+                        display: block;
+                        width: 23px;
+                        height: 2px;
+                        background-color: $color-2;
+                        position: relative;
+                        top: 0px;
+                        transform: rotate(45deg);
+                        transition: .5s ease-in-out;
+                    }
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 23px;
+                        height: 2px;
+                        background-color: $color-2;
+                        position: relative;
+                        top: -2px;
+                        transform: rotate(-45deg);
+                        transition: .5s ease-in-out;
+                    }
+
+                }
+           }
+           
+          
+           .ul{
+               display: flex;
+               margin-bottom: initial;
+                li{
+                    list-style: none;
+                a{
+                    display: block;
+                    color: $color-4;
+                    padding: $font-size/2;
+                    font-size: $font-size*1.2;
+                    &:hover{
+                       color: $color-2;
+                    }
+                    } 
+                    
+                } 
+                @media (max-width: $media-s){
+                    display: block;
+                    li{
+                       
+                        
+                    a{
+                        color: $color-4;
+                        padding: $font-size;
+                        font-size: $font-size*1.2;
+                        background-color: rgba($color-2, .2);
+                      
+                        border-bottom: 1px solid $color-3; 
+                        &:hover{
+                           color: $color-3;
+                           background-color: rgba($color-2, .6);
+                        }
+                        } 
+                        
+                    } 
+                    }   
+            } 
+                
+           
+   
+        } 
+         .nav--mobil{
+            right: 0;
+            position: relative;
+        }  
+          
+    }
+      
 
 
 
@@ -95,9 +242,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
         top: 0;
         right: 0;
         z-index: 500;
+        transition: .5s ease-in-out;
 
         background-image: url(/img/IMG_20190416_104543_5.jpg);
         @extend %bgi-justifier;
+        &:hover{
+            filter: brightness(.5);
+            width: 98%;
+            height: 98%;
+        }
            
     }
     span:nth-child(2){
@@ -110,7 +263,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
         position: absolute;
         bottom: 0;
         left: 0;
-            
     }
 
 }
@@ -120,21 +272,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
         display: block;
         height: 4px;
         background-color: $color-3;
-        width: 10%;
-        margin-bottom: $font-size; 
+        width: 25%;
+        position: absolute;
+        bottom: 19px;
         @media (max-width: 768px){
         margin-right: auto;
         margin-left: auto;
+       
     }
    
     }
 }
 
-@media (max-width: 768px){
-    .section1-aboutme{
-        text-align: center;
-    }
-}
 
 .section--myskill{
     background-color: $color-2;
@@ -146,15 +295,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
             width: 200px;
             height: 200px;
             border-radius: 100%; 
-        
-            &::before{
-                content: "";
-               
-                border-radius: 100%;
-                background-color: rgb(216, 10, 10);
-               
-               
+            transition: ease-in-out .5s;
+            &:hover{
+                background-size: 90%;
+                  
             }
+       
             &:nth-child(1){
                 background-image: url(/img/HTML5.png);
                 @extend %bgi-justifier;
@@ -193,11 +339,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
             &:nth-child(7){
                 background-image: url(/img/Adobexd.png);
                 @extend %bgi-justifier;
-                background-size: 70%;
+                background-size: 60%;
                
+            }
+            &:hover{
+                background-size: 90%;
+                  
             }
 
         }
+
     }   
 }
 .svg--skill{
@@ -245,12 +396,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
             padding: $font-size;
             background-color: $color-2;
             border-radius: 5px;
-
+            transition: .5s ease-in-out;
 
             .icon-services{
                 fill: $color-3;
                 width: $font-size*3;
                 height: $font-size*3;
+            }
+            &:hover{
+                opacity: .8;
+                transform: scale(1.1);
+                box-shadow: -5px 5px 31px 2px rgba(0,0,0,0.75);
             }
         }
        
@@ -260,11 +416,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
 .icon-contact{
    color: $color-white;
    margin: $font-size/2;
+   transition: ease-in-out .5s;
+   &:hover{
+       position: relative;
+       top: -3px;
+       svg{
+        fill: $color-4; 
+       }
+       transition: ease-in-out .5s;
+
+   }
    svg{
        width: $font-size*1.5;
        height: $font-size*1.5;
        fill: $color-3;
        margin: 0 5px;
+       transition: ease-in-out .5s;
     
    }
 
