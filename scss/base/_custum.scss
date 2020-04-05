@@ -37,15 +37,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
         }  
     }
     .topbar{
-    
+   
+    z-index: 510;
         
         .nav{
             position: fixed;
             z-index: 510;
             top: 0;
+            
+            background-color: rgba($color-2, .3);
             @media (max-width: $media-s){
-              right: -155px;
+              display: flex;
+           
+              left: calc(100% - 50px);
               background-color: rgba($color-2, .2);
+              width: 100%;
               
              } 
             transition: .8s ease-in-out;
@@ -142,24 +148,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
            .ul{
                display: flex;
                margin-bottom: initial;
+
+               @media (max-width: $media-s){
+                   display: block;
+                   width: calc(100% - 50px);
+               }
+              
                 li{
                     list-style: none;
-                a{
                     display: block;
-                    color: $color-4;
+                   
+                   
+                    a{
+                    display: block;
+                    color: $color-3;
                     padding: $font-size/2;
                     font-size: $font-size*1.2;
+                    border-right:1px solid $color-3;
                     &:hover{
-                       color: $color-2;
+                       color: $color-4;
                     }
                     } 
                     
                 } 
                 @media (max-width: $media-s){
-                    display: block;
                     li{
-                       
-                        
+                      width: 100%; 
                     a{
                         color: $color-4;
                         padding: $font-size;
@@ -169,6 +183,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
                         border-bottom: 1px solid $color-3; 
                         &:hover{
                            color: $color-3;
+                           padding-left: $font-size*.8;
                            background-color: rgba($color-2, .6);
                         }
                         } 
@@ -181,15 +196,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
    
         } 
          .nav--mobil{
-            right: 0;
+            left: 0;
             position: relative;
+                     
+            .ul{
+                @media (max-width: $media-s){
+
+            }
+            }
+            
         }  
           
     }
       
-
-
-
 .container{
     @include limitMaxWidth($width, $max-width);
     display: flex;
