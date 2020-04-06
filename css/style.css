@@ -1651,6 +1651,7 @@ textarea {
     left: calc(100% - 50px);
     background-color: rgba(10, 9, 9, 0.2);
     width: 100%;
+    border-radius: 0 0 0 30px;
   }
 }
 
@@ -1662,9 +1663,10 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0 0 0 30px;
   background-color: rgba(10, 9, 9, 0.2);
 }
 
@@ -1803,7 +1805,7 @@ textarea {
   color: #E3B507;
   padding: 8px;
   font-size: 19.2px;
-  border-right: 1px solid #E3B507;
+  border-right: 1px solid rgba(227, 181, 7, 0.5);
 }
 
 .topbar .nav .ul li a:hover {
@@ -1820,7 +1822,7 @@ textarea {
     font-size: 19.2px;
     background-color: rgba(10, 9, 9, 0.9);
     border-right: none;
-    border-bottom: 1px solid #E3B507;
+    border-bottom: 1px solid rgba(227, 181, 7, 0.5);
   }
   .topbar .nav .ul li a:hover {
     color: #E3B507;
