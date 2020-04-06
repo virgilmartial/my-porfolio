@@ -1639,8 +1639,8 @@ textarea {
   z-index: 510;
   top: 0;
   background-color: rgba(10, 9, 9, 0.3);
-  -webkit-transition: .8s ease-in-out;
-  transition: .8s ease-in-out;
+  -webkit-transition: .8s ease-out;
+  transition: .8s ease-out;
 }
 
 @media (max-width: 768px) {
@@ -1654,6 +1654,24 @@ textarea {
   }
 }
 
+.topbar .nav .menuSocial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: rgba(10, 9, 9, 0.2);
+}
+
+.topbar .nav .menuSocialOb {
+  background-color: rgba(10, 9, 9, 0.9);
+}
+
 .topbar .nav .icons-socialnetwork {
   display: none;
 }
@@ -1661,6 +1679,9 @@ textarea {
 @media (max-width: 768px) {
   .topbar .nav .icons-socialnetwork {
     display: block;
+  }
+  .topbar .nav .icons-socialnetwork div {
+    padding-top: 10px;
   }
 }
 
@@ -1797,7 +1818,8 @@ textarea {
     color: #A5A5A5;
     padding: 16px;
     font-size: 19.2px;
-    background-color: rgba(10, 9, 9, 0.2);
+    background-color: rgba(10, 9, 9, 0.9);
+    border-right: none;
     border-bottom: 1px solid #E3B507;
   }
   .topbar .nav .ul li a:hover {
@@ -1809,7 +1831,7 @@ textarea {
 
 .topbar .nav--mobil {
   left: 0;
-  position: relative;
+  position: fixed;
 }
 
 .container {

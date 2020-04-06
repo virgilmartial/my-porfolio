@@ -37,7 +37,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
         }  
     }
     .topbar{
-   
+    
     z-index: 510;
         
         .nav{
@@ -54,11 +54,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
               width: 100%;
               
              } 
-            transition: .8s ease-in-out;
+            transition: .8s ease-out;
+            .menuSocial{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                background-color: rgba($color-2, .2);
+            }
+            //me nu social obscuro,cambio del bgc del menu solcial cuando se abre
+            .menuSocialOb{
+               
+                background-color: rgba($color-2, .9);
+            }
+
             .icons-socialnetwork{
                 display: none;
                 @media (max-width: $media-s){
                     display: block;
+                    div{
+                        padding-top: 10px;
+                    }
+                  
                   
                  } 
             }
@@ -152,6 +168,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
                @media (max-width: $media-s){
                    display: block;
                    width: calc(100% - 50px);
+                
                }
               
                 li{
@@ -178,8 +195,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
                         color: $color-4;
                         padding: $font-size;
                         font-size: $font-size*1.2;
-                        background-color: rgba($color-2, .2);
-                      
+                        background-color: rgba($color-2, .9);
+                        border-right:none;
                         border-bottom: 1px solid $color-3; 
                         &:hover{
                            color: $color-3;
@@ -197,7 +214,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0909', end
         } 
          .nav--mobil{
             left: 0;
-            position: relative;
+            position: fixed;
                      
             .ul{
                 @media (max-width: $media-s){

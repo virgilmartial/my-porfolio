@@ -9,9 +9,9 @@
 </head>
 <body>
     <header class="header ">
-        <div class="container topbar flex flex--end pl10 pr10">
+        <div class="container topbar flex flex--end pl10">
             <nav id="navID"  class="nav flex"> 
-                <span class="pt10 pb10">
+                <span class="menuSocial  pt10 pb10">
                     <span id="btnMenuID" class="btn-menu center">
                        <span id="btnAmbgID" class="btn-ambg"></span>
                     </span>  
@@ -40,6 +40,7 @@
                     <li><a href="#sobreMe">Sobre me</a></li>
                     <li><a href="#miPerfil">Mi perfil</a></li>
                     <li><a href="#competencia">Lo que hago</a></li>
+                    <li><a href="#competencia">Mis proyectos</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul> 
                 
@@ -179,6 +180,23 @@
             </div>
 
         </section>
+        <section class="section ">
+            <div class="container">
+                <div>
+
+
+                </div>
+              <ul class="flex">
+                  <li> <a href="#"><img src="/img/bootstrap.png" alt=""> </a> </li>
+                  <li> <a href="#"><img src="/img/HTML5.png" alt=""> </a> </li>
+                  <li> <a href="#"><img src="/img/css3.png" alt=""> </a> </li>
+                  <li> <a href="#"><img src="/img/JavaScript.png" alt=""> </a> </li>
+              </ul>
+
+            </div>
+
+
+        </section>
         <section class="section bgc2">
             <div id="contact" class="container subtitle pt30 pb30 pl10 pr10"><p class="h4">Contacta me</p>
             </div>
@@ -270,13 +288,21 @@
         var btnMenu = document.querySelector("#btnMenuID");
         var menuAmbg = document.querySelector("#btnAmbgID");
         var nav = document.querySelector("#navID");
+        var menuSocial =document.querySelector(".menuSocial")
+    
 
         btnMenu.addEventListener("click",functionBtn);
          function functionBtn() {
              menuAmbg.classList.toggle("btn-x");
              nav.classList.toggle("nav--mobil");
+             menuSocial.classList.toggle("menuSocialOb")
+             
         
          }
+
+       console.log(window.innerHeight.valueOf) 
+       
+
 
     </script>
 </body>
