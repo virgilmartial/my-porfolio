@@ -1602,7 +1602,7 @@ textarea {
   margin-bottom: 10px;
 }
 
-.section1-picture span:nth-child(1), .section--myskill .container div:nth-child(1), .section--myskill .container div:nth-child(2), .section--myskill .container div:nth-child(3), .section--myskill .container div:nth-child(4), .section--myskill .container div:nth-child(5), .section--myskill .container div:nth-child(6), .section--myskill .container div:nth-child(7) {
+.section1-picture span:nth-child(1), .section--myskill .container div:nth-child(1), .section--myskill .container div:nth-child(2), .section--myskill .container div:nth-child(3), .section--myskill .container div:nth-child(4), .section--myskill .container div:nth-child(5), .section--myskill .container div:nth-child(6), .section--myskill .container div:nth-child(7), .section--myskill .container div:nth-child(8) {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1991,6 +1991,11 @@ textarea {
 }
 
 .section--myskill .container div:nth-child(7) {
+  background-image: url(/img/vue.png);
+  background-size: 60%;
+}
+
+.section--myskill .container div:nth-child(8) {
   background-image: url(/img/Adobexd.png);
   background-size: 60%;
 }
@@ -2094,6 +2099,31 @@ textarea {
   margin: 0 5px;
   -webkit-transition: ease-in-out .5s;
   transition: ease-in-out .5s;
+}
+
+.section--proyectos .services a {
+  min-width: 250px;
+  height: 200px;
+  margin-top: 32px;
+  padding: 16px;
+  background-color: #0A0909;
+  border-radius: 5px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.section--proyectos .services a .icon-services {
+  fill: #E3B507;
+  width: 48px;
+  height: 48px;
+}
+
+.section--proyectos .services a:hover {
+  opacity: .8;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: -5px 5px 31px 2px rgba(0, 0, 0, 0.75);
+          box-shadow: -5px 5px 31px 2px rgba(0, 0, 0, 0.75);
 }
 
 h5.sg {
