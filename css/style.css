@@ -1991,7 +1991,7 @@ textarea {
 }
 
 .section--myskill .container div:nth-child(7) {
-  background-image: url(/img/vue.png);
+  background-image: url();
   background-size: 60%;
 }
 
